@@ -9,7 +9,31 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    $("button").click(function() {
+        var fired_button = $(this).val();
+        //alert(fired_button);
+        //$(".main-screen").val(fired_button);
+          var number = $(this).val();
+         $(".main-screen").val(function() {
+           var data = this.value + number;
+
+            if(fired_button == '='){
+                var arr = data.split('+');
+                var stotal =  parseInt(arr[0]) +  parseInt(arr[1]);
+                return data+stotal;
+            }else{
+                return data;
+            }
+        
+    });
+    });
+});
+</script>
 </head>
 <body>
 
@@ -28,7 +52,11 @@
                     <label>Simple Calculator</label>
                 </div>
                 <div class="panel-body pb-calc-panel-body">
+<<<<<<< HEAD
                     <input type="text" id="display" class="form-control" placeholder="2 + 2 = 4">
+=======
+                    <input type="text" class="form-control main-screen" placeholder="2 + 2 = 4">
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
 
                     <hr class="pb-calc-hr">
                     <div class="row">
@@ -53,34 +81,50 @@
                         <div class="col-md-12">
                             <div class="row" style="padding-bottom: 5px;">
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn">CE</button>
+                                    <button value="CE" class="btn pb-calc-btn">CE</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
+<<<<<<< HEAD
                                     <button class="btn pb-calc-btn" onclick="clearDisplay()">C</button>
+=======
+                                    <button value="C" class="btn pb-calc-btn">C</button>
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn"><span class="fa fa-arrow-circle-o-left"></span></button>
+                                    <button value="PD" class="btn pb-calc-btn"><span class="fa fa-arrow-circle-o-left"></span></button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn"><strong>/</strong></button>
+                                    <button value="/" class="btn pb-calc-btn"><strong>/</strong></button>
                                 </div>
                             </div>
                             <div class="row" style="padding-bottom: 5px;">
                                 <div class="col-xs-3 col-sm-3 col-md-3">
+<<<<<<< HEAD
                                     <button class="btn pb-calc-btn" onclick="numInput(7)">7</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
                                     <button class="btn pb-calc-btn" onclick="numInput(8)">8</button>
+=======
+                                    <button value="7" class="btn pb-calc-btn">7</button>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                    <button value="8" class="btn pb-calc-btn">8</button>
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
                                     <button class="btn pb-calc-btn" onclick="numInput(9)">9</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
+<<<<<<< HEAD
                                     <button class="btn pb-calc-btn" ><span class="fa fa-times fa-lg"></span></button>
+=======
+                                    <button value="*" class="btn pb-calc-btn"><span class="fa fa-times fa-lg"></span></button>
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
                                 </div>
                             </div>
                             <div class="row" style="padding-bottom: 5px;">
                                 <div class="col-xs-3 col-sm-3 col-md-3">
+<<<<<<< HEAD
                                     <button class="btn pb-calc-btn" onclick="numInput(4)">4</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
@@ -88,13 +132,23 @@
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
                                     <button class="btn pb-calc-btn" onclick="numInput(6)">6</button>
+=======
+                                    <button value="4" class="btn pb-calc-btn">4</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn"><span class="fa fa-minus"></span></button>
+                                    <button value ="5" class="btn pb-calc-btn button">5</button>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                    <button value="6" class="btn pb-calc-btn">6</button>
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                    <button value="-" class="btn pb-calc-btn"><span class="fa fa-minus"></span></button>
                                 </div>
                             </div>
                             <div class="row" style="padding-bottom: 5px;">
                                 <div class="col-xs-3 col-sm-3 col-md-3">
+<<<<<<< HEAD
                                     <button class="btn pb-calc-btn" onclick="numInput(1)">1</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
@@ -102,9 +156,18 @@
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
                                     <button class="btn pb-calc-btn" onclick="numInput(2)">3</button>
+=======
+                                    <button value="1" class="btn pb-calc-btn">1</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn"><span class="fa fa-plus"></span></button>
+                                    <button value="1" class="btn pb-calc-btn">2</button>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                    <button value="3" class="btn pb-calc-btn">3</button>
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+                                    <button value="+" class="btn pb-calc-btn"><span class="fa fa-plus"></span></button>
                                 </div>
                             </div>
                             <div class="row" style="padding-bottom: 5px;">
@@ -112,13 +175,17 @@
                                     <button class="btn pb-calc-btn"><span class="fa fa-calculator"></span></button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
+<<<<<<< HEAD
                                     <button class="btn pb-calc-btn" onclick="numInput(0)">0</button>
+=======
+                                    <button value="0" class="btn pb-calc-btn">0</button>
+>>>>>>> 54508c32954651c48c7a844ea5eecd0a9c1867a5
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn">,</button>
+                                    <button value="," class="btn pb-calc-btn">,</button>
                                 </div>
                                 <div class="col-xs-3 col-sm-3 col-md-3">
-                                    <button class="btn pb-calc-btn"><strong>=</strong></button>
+                                    <button value= "=" class="btn pb-calc-btn"><strong>=</strong></button>
                                 </div>
                             </div>
                         </div>
